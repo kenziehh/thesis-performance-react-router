@@ -5,12 +5,14 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
     --color-primary-green: #357960;
+    --color-primary-red: oklch(0.6 0.25 27);
+    --color-primary-red-foreground: oklch(0.985 0 0);
 }
 
 
 :root {
-  --primary-green:var(--primary-green);
-  
+  --primary-green: var(--color-primary-green);
+  --primary-red: var(--color-primary-red);
 }
 
 
