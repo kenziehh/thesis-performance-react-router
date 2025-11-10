@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/navbar'
-import Article from './containers/article'
+import Article from './components/article'
 
 export default function NewsContainer() {
     return (

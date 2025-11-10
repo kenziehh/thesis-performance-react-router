@@ -1,8 +1,8 @@
 import Navbar from './components/navbar'
 import { BannerCarousel } from './components/carousel'
 import { banners } from './data/banners'
-import CategorySection from './containers/category-section'
-import NewProductSection from './containers/new-product-section'
+import CategorySection from './components/category-section'
+import NewProductSection from './components/new-product-section'
 
 export default function EcommerceContainer() {
   return (
