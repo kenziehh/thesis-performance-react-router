@@ -1,6 +1,7 @@
+"use client"
 import { useState } from 'react'
-import { Link } from 'react-router'
 import { Menu, X } from 'lucide-react'
+import { Link } from 'react-router'
 import Button from '~/shared/components/button'
 
 export default function Navbar() {

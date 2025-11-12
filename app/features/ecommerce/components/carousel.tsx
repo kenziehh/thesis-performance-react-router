@@ -2,8 +2,9 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import type { Banner } from "../types"
 
-export function BannerCarousel({ banners }: { banners: { img: string, alt: string }[] }) {
+export function BannerCarousel({ banners }: { banners: Banner[] }) {
     const [index, setIndex] = useState(0)
     const timerRef = useRef<NodeJS.Timeout | null>(null)
     const total = banners.length
@@ -39,9 +40,9 @@ export function BannerCarousel({ banners }: { banners: { img: string, alt: strin
                 >
                     {banners.map((b, i) => (
                         <figure key={i} className="min-w-full">
-                            <div className="aspect-[16/5] w-full">
+                            <div className="aspect-[16/5] w-full h-full relative">
                                 <img
-                                    src={b.img}
+                                    src={b.src}
                                     alt={b.alt}
                                     className="h-full w-full object-cover"
                                     loading={i === 0 ? "eager" : "lazy"}

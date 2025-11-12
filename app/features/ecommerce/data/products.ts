@@ -1,24 +1,4 @@
 import type { Product } from "../types";
-import product1 from "../assets/products/product1.jpg";
-import product2 from "../assets/products/product2.jpg";
-import product3 from "../assets/products/product3.jpg";
-import product4 from "../assets/products/product4.jpg";
-import product5 from "../assets/products/product5.jpg";
-import product6 from "../assets/products/product6.jpg";
-import product7 from "../assets/products/product7.jpg";
-import product8 from "../assets/products/product8.jpg";
-import product9 from "../assets/products/product9.jpg";
-import product10 from "../assets/products/product10.jpg";
-import product11 from "../assets/products/product11.jpeg";
-import product12 from "../assets/products/product12.jpeg";
-import product13 from "../assets/products/product13.jpeg";
-import product14 from "../assets/products/product14.jpeg";
-import product15 from "../assets/products/product15.jpeg";
-import product16 from "../assets/products/product16.jpeg";
-import product17 from "../assets/products/product17.jpeg";
-import product18 from "../assets/products/product18.jpeg";
-import product19 from "../assets/products/product19.jpeg";
-import product20 from "../assets/products/product20.jpeg";
 
 export const products: Product[] = [
     {
@@ -28,8 +8,7 @@ export const products: Product[] = [
         rating: 4.7,
         sold: 2300,
         location: "Jakarta Pusat",
-        imageAlt: "Logitech B175 Mouse Wireless",
-        image: product1,
+        src: "/ecommerce/product/product1.jpg",
     },
     {
         id: "p-002",
@@ -38,8 +17,7 @@ export const products: Product[] = [
         rating: 4.8,
         sold: 540,
         location: "Bandung",
-        imageAlt: "Keyboard mekanik RGB",
-        image: product2,
+        src: "/ecommerce/product/product2.jpg",
     },
     {
         id: "p-003",
@@ -48,8 +26,7 @@ export const products: Product[] = [
         rating: 4.9,
         sold: 1200,
         location: "Surabaya",
-        imageAlt: "Mouse wireless ergonomis",
-        image: product3,
+        src: "/ecommerce/product/product3.jpg",
     },
     {
         id: "p-004",
@@ -58,8 +35,7 @@ export const products: Product[] = [
         rating: 4.9,
         sold: 980,
         location: "Jakarta Barat",
-        imageAlt: "Monitor 27 inci IPS",
-        image: product4,
+        src: "/ecommerce/product/product4.jpg",
     },
     {
         id: "p-005",
@@ -68,8 +44,7 @@ export const products: Product[] = [
         rating: 4.5,
         sold: 2200,
         location: "Yogyakarta",
-        imageAlt: "Webcam Full HD",
-        image: product5,
+        src: "/ecommerce/product/product5.jpg",
     },
     {
         id: "p-006",
@@ -78,8 +53,7 @@ export const products: Product[] = [
         rating: 4.7,
         sold: 1750,
         location: "Bekasi",
-        imageAlt: "Microphone condenser USB",
-        image: product6,
+        src: "/ecommerce/product/product6.jpg",
     },
     {
         id: "p-007",
@@ -88,8 +62,7 @@ export const products: Product[] = [
         rating: 4.6,
         sold: 870,
         location: "Semarang",
-        imageAlt: "Kursi gaming hitam",
-        image: product7,
+        src: "/ecommerce/product/product7.jpg",
     },
     {
         id: "p-008",
@@ -98,8 +71,7 @@ export const products: Product[] = [
         rating: 4.7,
         sold: 1160,
         location: "Denpasar",
-        imageAlt: "Meja kerja minimalis",
-        image: product8,
+        src: "/ecommerce/product/product8.jpg",
     },
     {
         id: "p-009",
@@ -108,8 +80,7 @@ export const products: Product[] = [
         rating: 4.5,
         sold: 2100,
         location: "Depok",
-        imageAlt: "Lampu meja LED",
-        image: product9,
+        src: "/ecommerce/product/product9.jpg",
     },
     {
         id: "p-010",
@@ -118,8 +89,7 @@ export const products: Product[] = [
         rating: 4.9,
         sold: 3200,
         location: "Jakarta Timur",
-        imageAlt: "SSD NVMe 1TB",
-        image: product10,
+        src: "/ecommerce/product/product10.jpg",
     },
     {
         id: "p-011",
@@ -128,8 +98,7 @@ export const products: Product[] = [
         rating: 4.6,
         sold: 2650,
         location: "Bandung",
-        imageAlt: "Tas ransel anti air",
-        image: product11,
+        src: "/ecommerce/product/product11.jpeg",
     },
     {
         id: "p-012",
@@ -138,8 +107,7 @@ export const products: Product[] = [
         rating: 4.7,
         sold: 1980,
         location: "Surabaya",
-        imageAlt: "Sepatu lari breathable",
-        image: product12,
+        src: "/ecommerce/product/product12.jpeg",
     },
     {
         id: "p-013",
@@ -148,8 +116,7 @@ export const products: Product[] = [
         rating: 4.6,
         sold: 1400,
         location: "Jakarta Selatan",
-        imageAlt: "Smartwatch AMOLED",
-        image: product13,
+        src: "/ecommerce/product/product13.jpeg",
     },
     {
         id: "p-014",
@@ -158,8 +125,7 @@ export const products: Product[] = [
         rating: 4.8,
         sold: 680,
         location: "Makassar",
-        imageAlt: "Kamera mirrorless 24MP",
-        image: product14,
+        src: "/ecommerce/product/product14.jpeg",
     },
     {
         id: "p-015",
@@ -168,8 +134,7 @@ export const products: Product[] = [
         rating: 4.7,
         sold: 740,
         location: "Tangerang",
-        imageAlt: "Lensa 50mm f1.8",
-        image: product15,
+        src: "/ecommerce/product/product15.jpeg",
     },
     {
         id: "p-016",
@@ -178,8 +143,7 @@ export const products: Product[] = [
         rating: 4.6,
         sold: 4100,
         location: "Bogor",
-        imageAlt: "Power bank hitam",
-        image: product16,
+        src: "/ecommerce/product/product16.jpeg",
     },
     {
         id: "p-017",
@@ -188,8 +152,7 @@ export const products: Product[] = [
         rating: 4.7,
         sold: 2900,
         location: "Malang",
-        imageAlt: "Earbuds TWS ANC",
-        image: product17,
+        src: "/ecommerce/product/product17.jpeg",
     },
     {
         id: "p-018",
@@ -198,8 +161,7 @@ export const products: Product[] = [
         rating: 4.5,
         sold: 830,
         location: "Pontianak",
-        imageAlt: "Tablet layar 11 inci",
-        image: product18,
+        src: "/ecommerce/product/product18.jpeg",
     },
     {
         id: "p-019",
@@ -208,8 +170,7 @@ export const products: Product[] = [
         rating: 4.6,
         sold: 1650,
         location: "Palembang",
-        imageAlt: "Router WiFi 6",
-        image: product19,
+        src: "/ecommerce/product/product19.jpeg",
     },
     {
         id: "p-020",
@@ -218,47 +179,7 @@ export const products: Product[] = [
         rating: 4.5,
         sold: 2100,
         location: "Medan",
-        imageAlt: "Humidifier 3 liter",
-        image: product20,
+        src: "/ecommerce/product/product20.jpeg",
     },
-    // {
-    //     id: "p-021",
-    //     name: "Action Cam 4K Stabilization",
-    //     price: 1599000,
-    //     rating: 4.6,
-    //     sold: 920,
-    //     location: "Padang",
-    //     imageAlt: "Action camera 4K",
-    //     imageQuery: "action camera 4k waterproof",
-    // },
-    // {
-    //     id: "p-022",
-    //     name: "Blender Portable 500ml USB-C",
-    //     price: 149000,
-    //     rating: 4.4,
-    //     sold: 3100,
-    //     location: "Solo",
-    //     imageAlt: "Blender portable",
-    //     imageQuery: "portable blender 500ml usb c",
-    // },
-    // {
-    //     id: "p-023",
-    //     name: "Rice Cooker Mini 1L",
-    //     price: 229000,
-    //     rating: 4.5,
-    //     sold: 1800,
-    //     location: "Cirebon",
-    //     imageAlt: "Rice cooker mini",
-    //     imageQuery: "mini rice cooker 1l white",
-    // },
-    // {
-    //     id: "p-024",
-    //     name: "Set Panci Stainless 5-in-1",
-    //     price: 399000,
-    //     rating: 4.6,
-    //     sold: 1250,
-    //     location: "Manado",
-    //     imageAlt: "Set panci stainless",
-    //     imageQuery: "stainless steel pot set kitchen",
-    // },
+
 ]

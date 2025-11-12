@@ -1,7 +1,7 @@
 import React from 'react'
 import { categories } from '../data/categories'
+import { Badge } from '~/shared/components/badge'
 import { Link } from 'react-router'
-import { Badge } from '../components/badge'
 
 export default function CategorySection() {
     return (
@@ -13,9 +13,9 @@ export default function CategorySection() {
                 <div className="flex items-center gap-2 overflow-x-auto pb-2 [scrollbar-width:thin]">
                     {categories.map((c) => (
                         <Badge className='hover:bg-black hover:text-white'
-
+                            key={c}
                         >
-                            <Link to={`/ecommerce/${c.toLowerCase().replace(/\s+/g, '-').replace(/-&-/g, '-').replace(/&/g, '')}`} prefetch={'none'}>{c}</Link>
+                            <Link to={`/ecommerce/${c.toLowerCase().replace(/\s+/g, '-').replace(/-&-/g, '-').replace(/&/g, '')}`} prefetch={"none"}>{c}</Link>
                         </Badge>
                     ))}
                 </div>

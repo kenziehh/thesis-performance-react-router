@@ -4,6 +4,7 @@ import { banners } from './data/banners'
 import CategorySection from './components/category-section'
 import NewProductSection from './components/new-product-section'
 
+
 export default function EcommerceContainer() {
   return (
     <>

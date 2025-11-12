@@ -1,18 +1,16 @@
-import CarouselImage1 from "../assets/carousel1.jpg"
-import CarouselImage2 from "../assets/carousel2.jpg"
-import CarouselImage3 from "../assets/carousel3.jpg"
+import type { Banner } from "../types";
 
-export const banners = [
+export const banners: Banner[] = [
     {
         alt: "Promo elektronik besar-besaran",
-        img: CarouselImage1,
+        src: "/ecommerce/carousel/carousel1.jpg",
     },
     {
         alt: "Perlengkapan rumah tangga pilihan",
-        img: CarouselImage2,
+        src: "/ecommerce/carousel/carousel2.jpg",
     },
     {
         alt: "Fashion & aksesoris trend",
-        img: CarouselImage3,
+        src: "/ecommerce/carousel/carousel1.jpg",
     },
 ]

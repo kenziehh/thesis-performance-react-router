@@ -1,6 +1,6 @@
 import { Star } from "lucide-react"
-import { cn } from "~/shared/lib/utils"
 import type { Product } from "../types"
+import { cn } from "~/shared/lib/utils"
 import { formatIDR } from "~/shared/lib/format"
 
 
@@ -12,39 +12,35 @@ export function ProductCard({
     product: Product
     className?: string
 }) {
-    const { name, price, rating, sold, location, imageAlt, image } = product
-   
+
 
     return (
         <article
             className={cn(
-                "group relative h-full overflow-hidden rounded-lg shadow-lg bg-white transition-shadow",
-                "hover:shadow-md",
+                "group relative h-full overflow-hidden rounded-lg bg-white transition-shadow",
                 className,
             )}
         >
             <div className="relative">
                 <div className="aspect-square overflow-hidden">
                     <img
-                        src={image || "/placeholder.svg"}
-                        alt={imageAlt || name}
-                        loading="lazy"
-                        decoding="async"
+                        src={product.src}
+                        alt={product.name}
                         className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
                     />
                 </div>
             </div>
 
             <div className="space-y-2 p-3">
-                <h2 className="line-clamp-2 text-sm md:text-[0.95rem] font-normal leading-5 text-foreground">{name}</h2>
+                <h2 className="line-clamp-2 text-sm md:text-[0.95rem] font-normal leading-5 text-foreground">{product.name}</h2>
 
-                <div className="text-base md:text-lg font-semibold">{formatIDR(price)}</div>
+                <div className="text-base md:text-lg font-semibold">{formatIDR(product.price)}</div>
 
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <div className="flex items-center gap-1">
                         {/* rating stars */}
                         {Array.from({ length: 5 }).map((_, i) => {
-                            const active = i < Math.round(rating)
+                            const active = i < Math.round(product.rating)
                             return (
                                 <Star
                                     key={i}
@@ -54,13 +50,13 @@ export function ProductCard({
                                 />
                             )
                         })}
-                        <span className="ml-1">{rating.toFixed(1)}</span>
+                        <span className="ml-1">{product.rating.toFixed(1)}</span>
                     </div>
                     <span aria-hidden="true">•</span>
-                    <span>{sold.toLocaleString("id-ID")} terjual</span>
+                    <span>{product.sold.toLocaleString("id-ID")} terjual</span>
                 </div>
 
-                <div className="text-xs text-muted-foreground">{location}</div>
+                <div className="text-xs text-muted-foreground">{product.location}</div>
             </div>
         </article>
     )
