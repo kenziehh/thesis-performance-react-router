@@ -1,29 +1,23 @@
-import { BannerCarousel } from './components/carousel'
-import CategorySection from './components/category-section'
-import Navbar from './components/navbar'
-import NewProductSection from './components/new-product-section'
-import type { Banner, Product } from './types';
+import { BannerCarousel } from './components/carousel';
+import CategorySection from './components/category-section';
+import Navbar from './components/navbar';
+import NewProductSection from './components/new-product-section';
+import { banners } from './data/banners';
+import { categories } from './data/categories';
+import { products } from './data/products';
 
-type EcommerceLoaderData = {
-  banners: Banner[];
-  categories: string[];
-  products: Product[];
-};
-  
-export default function EcommerceContainer({ loaderData }: { loaderData: EcommerceLoaderData }) {
-  const {
-    banners: loadedBanners,
-    categories: loadedCategories,
-    products: loadedProducts
-  } = loaderData;
+
+
+export default function EcommerceContainer() {
+
 
   return (
     <>
       <Navbar />
       <main className='py-10 md:py-20'>
-        <BannerCarousel banners={loadedBanners} />
-        <CategorySection categories={loadedCategories} />
-        <NewProductSection products={loadedProducts} />
+        <BannerCarousel banners={banners} />
+        <CategorySection categories={categories} />
+        <NewProductSection products={products} />
       </main>
     </>
   );
