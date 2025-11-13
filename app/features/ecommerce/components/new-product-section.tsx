@@ -1,8 +1,8 @@
 import React from 'react'
 import { ProductCard } from '../components/product-card'
-import { products } from '../data/products'
+import type { Product } from '../types'
 
-export default function NewProductSection() {
+export default function NewProductSection({ products }: { products: Product[] }) {
     return (
         <section className='container px-4 pt-8 md:pt-14 pb-4 md:pb-10 flex-col flex gap-8'>
             <div className='flex flex-row justify-between gap-2'>

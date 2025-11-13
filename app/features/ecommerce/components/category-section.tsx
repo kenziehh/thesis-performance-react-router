@@ -3,7 +3,7 @@ import { categories } from '../data/categories'
 import { Badge } from '~/shared/components/badge'
 import { Link } from 'react-router'
 
-export default function CategorySection() {
+export default function CategorySection({categories}: {categories: string[]}) {
     return (
         <section className={"container  px-4 py-10 md:py-20"} aria-label="Kategori populer">
             <div className="mb-3 md:mb-4">
