@@ -8,7 +8,7 @@ import { products } from './data/products';
 
 
 
-export default function EcommerceContainer() {
+export default function EcommerceMain() {
 
 
   return (
