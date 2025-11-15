@@ -29,6 +29,7 @@ export default function Navbar() {
       >
         <div className="flex flex-col md:flex-row items-center md:gap-8 px-6 md:px-0">
           <Link
+            prefetch='none'
             to="/"
             className="py-3 md:py-2 hover:text-green-600 transition-colors"
             onClick={() => setIsOpen(false)}
@@ -36,6 +37,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link
+            prefetch='none'
             to="/products"
             className="py-3 md:py-2 hover:text-green-600 transition-colors"
             onClick={() => setIsOpen(false)}
@@ -43,6 +45,7 @@ export default function Navbar() {
             Products
           </Link>
           <Link
+            prefetch='none'
             to="/cart"
             className="py-3 md:py-2 hover:text-green-600 transition-colors"
             onClick={() => setIsOpen(false)}

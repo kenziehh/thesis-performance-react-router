@@ -6,7 +6,7 @@ export default function SectionHeader({ title, href }: { title: string, href: st
             <h3 className='text-xl'>
                 {title}
             </h3>
-            <Link to={href} className='text-md hover:text-gray-500'>
+            <Link to={href} className='text-md hover:text-gray-500' prefetch='none'>
                 Lihat semua
             </Link>
         </div>
