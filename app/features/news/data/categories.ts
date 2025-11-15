@@ -8,5 +8,5 @@ export const categories = [
     "Cek Fakta",
     "Tokoh",
     "Newsletter",
-    "Info Tempo",
+    "Info News",
 ]

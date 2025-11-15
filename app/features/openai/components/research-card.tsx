@@ -1,6 +1,5 @@
-import React from 'react'
-import type { Research } from '../types'
 import { formatDate } from '~/shared/lib/format'
+import type { Research } from '../types'
 
 
 export default function ResearchCard({ research }: { research: Research }) {

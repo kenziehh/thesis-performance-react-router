@@ -3,7 +3,7 @@ import type { News } from "../types";
 export const newsCards: News[] = [
     {
         src: "/openai/news/news1.png",
-        title: "AWS and OpenAI announce multi-year strategic partnership",
+        title: "AWS and AI announce multi-year strategic partnership",
         category: "Perusahaan",
         date: "2025-11-01",
     },
@@ -15,13 +15,13 @@ export const newsCards: News[] = [
     },
     {
         src: "/openai/news/news3.png",
-        title: "Memperkenalkan Aardvark: Peneliti keamanan berbasis agen dari OpenAI",
+        title: "Memperkenalkan Aardvark: Peneliti keamanan berbasis agen dari AI",
         category: "Keamanan",
         date: "2025-10-30",
     },
     {
         src: "/openai/news/news4.png",
-        title: "Bab berikutnya dari kemitraan Microsoft-OpenAI",
+        title: "Bab berikutnya dari kemitraan Microsoft-AI",
         category: "Perusahaan",
         date: "2025-10-28",
     },
@@ -33,7 +33,7 @@ export const newsCards: News[] = [
     },
     {
         src: "/openai/news/news6.png",
-        title: "OpenAI acquires Software Applications Incorporated, maker of Sky",
+        title: "AI acquires Software Applications Incorporated, maker of Sky",
         category: "Perusahaan",
         date: "2025-10-23",
     },

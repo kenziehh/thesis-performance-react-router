@@ -1,12 +1,12 @@
 "use client"
 
-import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import SectionHeader from "./section-header"
-import BusinessCard from "./business-card"
+import { useRef } from "react"
 import type { Business } from "../types"
+import BusinessCard from "./business-card"
+import SectionHeader from "./section-header"
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger, useGSAP)
@@ -64,7 +64,7 @@ export default function BusinessSection({ business }: { business: Business[] }) 
             ref={sectionRef}
             className="py-8 flex flex-col gap-6 p-6 container bg-white"
         >
-            <SectionHeader title="OpenAI untuk Bisnis" href="/business" />
+            <SectionHeader title="AI untuk Bisnis" href="/business" />
 
             <div className="hidden lg:grid grid-cols-3 gap-6">
                 {business.map((b, i) => (

@@ -3,7 +3,7 @@ import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "OpenAI" },
+    { title: "AI" },
     { name: "description", content: "This application is created and used for thesis purposes only." },
   ];
 }

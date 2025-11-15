@@ -31,7 +31,7 @@ export default function Navbar() {
                         aria-label="Home"
                         className="shrink-0 select-none font-serif text-3xl font-bold tracking-tight text-primary-red"
                     >
-                        {"TEMPO"}
+                        {"NEWS"}
                     </a>
 
                     <nav className="hidden items-center gap-4 md:flex">
@@ -61,7 +61,7 @@ export default function Navbar() {
                             <span className="inline-flex size-5 items-center justify-center rounded-[4px] bg-primary-red text-[10px] font-semibold leading-none text-primary-red-foreground">
                                 {"T+"}
                             </span>
-                            {"Tempo Plus"}
+                            {"News Plus"}
                         </a>
                     </nav>
                 </div>
@@ -108,9 +108,8 @@ export default function Navbar() {
 
             {open ? (
                 <Drawer onClose={() => setOpen(false)}>
-                    {/* Drawer header */}
                     <div className="flex items-center justify-between border-b px-4 py-3">
-                        <span className="font-serif text-2xl font-bold tracking-tight text-primary-red">{"TEMPO"}</span>
+                        <span className="font-serif text-2xl font-bold tracking-tight text-primary-red">{"NEWS"}</span>
                         <button
                             type="button"
                             aria-label="Tutup"
@@ -135,9 +134,9 @@ export default function Navbar() {
                         </a>
                         <a href="#" className="flex items-center gap-2 rounded-md px-2 py-2 hover:bg-muted">
                             <span className="inline-flex size-5 items-center justify-center rounded-[4px] bg-primary-red text-[10px] font-semibold leading-none text-primary-red-foreground">
-                                {"T+"}
+                                {"N+"}
                             </span>
-                            {"Tempo Plus"}
+                            {"News Plus"}
                         </a>
                     </div>
 

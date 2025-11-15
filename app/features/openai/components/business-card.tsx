@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Business } from '../types'
 
 export default function BusinessCard({ business }: { business: Business }) {

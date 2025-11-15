@@ -1,11 +1,11 @@
 "use client"
 
-import { Link } from "react-router"
-import React, { useRef } from "react"
-import gsap from "gsap"
-import { TextPlugin } from "gsap/TextPlugin"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { TextPlugin } from "gsap/TextPlugin"
+import { useRef } from "react"
+import { Link } from "react-router"
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(TextPlugin, ScrollTrigger, useGSAP)

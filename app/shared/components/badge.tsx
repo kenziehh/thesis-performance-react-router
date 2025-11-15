@@ -1,6 +1,6 @@
-import React from 'react'
+import type { JSX } from 'react';
+import React from 'react';
 import { cn } from '~/shared/lib/utils';
-import type { HTMLElementType, JSX } from 'react';
 
 export const badgeVariantStyles = {
     'white': 'rounded-2xl bg-white text-black hover:bg-white/80',

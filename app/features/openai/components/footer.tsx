@@ -6,13 +6,13 @@ export function Footer() {
         { label: "Indeks Riset", href: "#" },
         { label: "Ringgasan Riset", href: "#" },
         { label: "Residensial Riset", href: "#" },
-        { label: "OpenAI for Science", href: "#" },
+        { label: "AI for Science", href: "#" },
         {
           label: "Kemajuan Terbaru",
           subsections: [
             { label: "GPT-5", href: "#" },
-            { label: "OpenAI o3", href: "#" },
-            { label: "OpenAI o4-mini", href: "#" },
+            { label: "AI o3", href: "#" },
+            { label: "AI o4-mini", href: "#" },
             { label: "GPT-4o", href: "#" },
             { label: "GPT-4o mini", href: "#" },
             { label: "Sora", href: "#" },
@@ -105,7 +105,6 @@ export function Footer() {
               <h3 className="text-gray-600 text-sm font-medium mb-4 uppercase tracking-wide">{column.title}</h3>
               <ul className="space-y-3">
                 {column.links.map((link, linkIdx) => {
-                  // Check if this link has subsections
                   if ("subsections" in link && link.subsections) {
                     return (
                       <div key={linkIdx}>
@@ -152,10 +151,9 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Footer bottom */}
         <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-gray-600 text-sm">© 2025 OpenAI. All rights reserved.</div>
+            <div className="text-gray-600 text-sm">© 2025 AI. All rights reserved.</div>
             <div className="flex gap-6">
               <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
                 Twitter

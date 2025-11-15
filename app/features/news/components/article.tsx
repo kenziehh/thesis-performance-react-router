@@ -1,7 +1,6 @@
-import React from 'react'
 import { article } from '../data/article'
-import ArticleHeader from './article-header'
 import ArticleBody from './article-body'
+import ArticleHeader from './article-header'
 
 export default function Article() {
   return (
