@@ -23,6 +23,7 @@ export default function ArticleHeader({ article }: { article: Article }) {
                     width={1920}
                     height={1080}
                     autoPlay
+                    muted
                 >
                     <source src="/videos/news-clip.mp4" type="video/mp4" />
                     Browser Anda tidak mendukung video HTML5.
