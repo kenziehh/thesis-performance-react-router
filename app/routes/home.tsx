@@ -1,13 +1,13 @@
+import HomeOpenAI from "~/features/openai";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "OpenAI" },
+    { name: "description", content: "This application is created and used for thesis purposes only." },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <HomeOpenAI />;
 }
