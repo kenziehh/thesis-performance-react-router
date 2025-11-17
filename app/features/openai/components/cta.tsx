@@ -1,12 +1,10 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
-import TextPlugin from "gsap/TextPlugin"
 import { useRef } from "react"
 import { Link } from "react-router"
 
 if (typeof window !== "undefined") {
-    gsap.registerPlugin(TextPlugin, ScrollTrigger, useGSAP)
+    gsap.registerPlugin(useGSAP)
 }
 
 export default function CTA() {
@@ -15,7 +13,11 @@ export default function CTA() {
     const buttonRef = useRef<HTMLAnchorElement | null>(null)
 
     useGSAP(
-        () => {
+        async () => {
+            if (typeof window === "undefined") return
+            const ScrollTrigger = (await import("gsap/ScrollTrigger")).default
+            const TextPlugin = (await import("gsap/TextPlugin")).default
+            gsap.registerPlugin(ScrollTrigger, TextPlugin)
             const scroller = document.querySelector("[data-scroll-container]")
 
             gsap.from(sectionRef.current, {
@@ -70,8 +72,7 @@ export default function CTA() {
                 <h2
                     ref={titleRef}
                     className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"
-                >
-                </h2>
+                />
                 <Link
                     ref={buttonRef}
                     to="/download"

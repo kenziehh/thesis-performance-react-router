@@ -7,18 +7,19 @@ import NewsCard from "./news-card"
 import SectionHeader from "./section-header"
 
 if (typeof window !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger, useGSAP)
+    gsap.registerPlugin(useGSAP)
 }
 
 export default function LatestNews({ news }: { news: News[] }) {
     const sectionRef = useRef<HTMLDivElement | null>(null)
     const cardsRef = useRef<(HTMLDivElement | null)[]>([])
 
-    useGSAP(() => {
+    useGSAP(async () => {
+        if (typeof window === "undefined") return
+        const ScrollTrigger = (await import("gsap/ScrollTrigger")).default
+        gsap.registerPlugin(ScrollTrigger)
         const scroller = document.querySelector('[data-scroll-container]')
-
         if (!sectionRef.current) return
-
         gsap.from(sectionRef.current, {
             opacity: 0,
             y: 50,
@@ -30,7 +31,6 @@ export default function LatestNews({ news }: { news: News[] }) {
                 toggleActions: "play none none reverse",
             },
         })
-
         cardsRef.current.forEach((card, i) => {
             if (!card) return
             gsap.from(card, {
@@ -47,9 +47,7 @@ export default function LatestNews({ news }: { news: News[] }) {
                 },
             })
         })
-    }, { scope: sectionRef }
-    )
-
+    }, { scope: sectionRef })
     return (
         <section
             ref={sectionRef}

@@ -7,59 +7,62 @@ import ResearchCard from "./research-card"
 import SectionHeader from "./section-header"
 
 if (typeof window !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger, useGSAP)
+    gsap.registerPlugin(useGSAP)
 }
 
 export default function LatestResearch({ researchs }: { researchs: Research[] }) {
     const sectionRef = useRef<HTMLDivElement | null>(null)
     const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+    useGSAP(
+        async () => {
+            if (typeof window === "undefined") return
+            const ScrollTrigger = (await import("gsap/ScrollTrigger")).default
+            gsap.registerPlugin(ScrollTrigger)
+            const scroller = document.querySelector("[data-scroll-container]")
 
-    useGSAP(() => {
-        const scroller = document.querySelector("[data-scroll-container]")
-
-        if (!sectionRef.current) return
-
-        gsap.fromTo(
-            sectionRef.current,
-            { opacity: 0, y: 20 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    scroller: scroller || window,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse",
-                },
-            }
-        )
-
-        // Animasi kartu: fade + sedikit scale
-        cardRefs.current.forEach((card, i) => {
-            if (!card) return
+            if (!sectionRef.current) return
 
             gsap.fromTo(
-                card,
-                { opacity: 0, y: 30, scale: 0.95 },
+                sectionRef.current,
+                { opacity: 0, y: 20 },
                 {
                     opacity: 1,
                     y: 0,
-                    scale: 1,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    ease: "power2.out",
+                    duration: 0.8,
+                    ease: "power3.out",
                     scrollTrigger: {
-                        trigger: card,
+                        trigger: sectionRef.current,
                         scroller: scroller || window,
-                        start: "top 90%",
+                        start: "top 85%",
                         toggleActions: "play none none reverse",
                     },
                 }
             )
-        })
-    }, { scope: sectionRef })
+
+            // Animasi kartu: fade + sedikit scale
+            cardRefs.current.forEach((card, i) => {
+                if (!card) return
+
+                gsap.fromTo(
+                    card,
+                    { opacity: 0, y: 30, scale: 0.95 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            scroller: scroller || window,
+                            start: "top 90%",
+                            toggleActions: "play none none reverse",
+                        },
+                    }
+                )
+            })
+        }, { scope: sectionRef })
 
     return (
         <section

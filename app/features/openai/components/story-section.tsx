@@ -6,49 +6,54 @@ import type { Story } from "../types"
 import SectionHeader from "./section-header"
 import StoryCard from "./story-card"
 
+
 if (typeof window !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger,useGSAP)
+    gsap.registerPlugin(useGSAP)
 }
 
 export default function StorySection({ stories }: { stories: Story[] }) {
     const sectionRef = useRef<HTMLDivElement | null>(null)
     const storyRefs = useRef<(HTMLDivElement | null)[]>([])
 
-    useGSAP(() => {
-        const scroller = document.querySelector("[data-scroll-container]")
-        if (!sectionRef.current) return
+    useGSAP(
+        async () => {
+            if (typeof window === "undefined") return
+            const ScrollTrigger = (await import("gsap/ScrollTrigger")).default
+            gsap.registerPlugin(ScrollTrigger)
+            const scroller = document.querySelector("[data-scroll-container]")
+            if (!sectionRef.current) return
 
-        gsap.from(sectionRef.current, {
-            opacity: 0,
-            rotateX: 10,
-            scale: 0.9,
-            duration: 1.2,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                scroller: scroller || window,
-                start: "top 85%",
-                toggleActions: "play none none reverse",
-            },
-        })
-
-        storyRefs.current.forEach((story, i) => {
-            if (!story) return
-            gsap.from(story, {
+            gsap.from(sectionRef.current, {
                 opacity: 0,
-                y: 60,
-                duration: 0.9,
-                delay: i * 0.1,
-                ease: "back.out(1.7)",
+                rotateX: 10,
+                scale: 0.9,
+                duration: 1.2,
+                ease: "power3.out",
                 scrollTrigger: {
-                    trigger: story,
+                    trigger: sectionRef.current,
                     scroller: scroller || window,
-                    start: "top 90%",
+                    start: "top 85%",
                     toggleActions: "play none none reverse",
                 },
             })
-        })
-    },
+
+            storyRefs.current.forEach((story, i) => {
+                if (!story) return
+                gsap.from(story, {
+                    opacity: 0,
+                    y: 60,
+                    duration: 0.9,
+                    delay: i * 0.1,
+                    ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: story,
+                        scroller: scroller || window,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse",
+                    },
+                })
+            })
+        },
         { scope: sectionRef }
 
     )

@@ -7,7 +7,7 @@ import BusinessCard from "./business-card"
 import SectionHeader from "./section-header"
 
 if (typeof window !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger, useGSAP)
+    gsap.registerPlugin(useGSAP)
 }
 
 export default function BusinessSection({ business }: { business: Business[] }) {
@@ -15,7 +15,10 @@ export default function BusinessSection({ business }: { business: Business[] }) 
     const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
     useGSAP(
-        () => {
+        async () => {
+            if (typeof window === "undefined") return
+            const ScrollTrigger = (await import("gsap/ScrollTrigger")).default
+            gsap.registerPlugin(ScrollTrigger)
             const scroller = document.querySelector("[data-scroll-container]")
 
             gsap.from(sectionRef.current, {
