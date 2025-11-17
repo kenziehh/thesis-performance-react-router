@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import type { Banner } from "../types"
 
-export function BannerCarousel({ banners }: { banners: Banner[] }) {
+export default function BannerCarousel({ banners }: { banners: Banner[] }) {
     const [index, setIndex] = useState(0)
     const timerRef = useRef<NodeJS.Timeout | null>(null)
     const total = banners.length

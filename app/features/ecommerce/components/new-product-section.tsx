@@ -1,5 +1,4 @@
-import React from 'react'
-import { ProductCard } from '../components/product-card'
+import ProductCard from '../components/product-card'
 import type { Product } from '../types'
 
 export default function NewProductSection({ products }: { products: Product[] }) {

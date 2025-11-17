@@ -1,4 +1,4 @@
-import { BannerCarousel } from './components/carousel';
+import BannerCarousel from './components/carousel';
 import CategorySection from './components/category-section';
 import Navbar from './components/navbar';
 import NewProductSection from './components/new-product-section';

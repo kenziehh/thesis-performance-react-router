@@ -1,22 +1,19 @@
 import { useRef, useState, type RefObject } from "react"
-import { Navbar } from "./components/navbar"
-import { Sidebar } from "./components/sidebar"
-
-import { FeaturedSection } from "./components/featured-section"
-
-import LatestNews from "./components/latest-news"
-import StorySection from "./components/story-section"
-import LatestResearch from "./components/latest-research"
 import BusinessSection from "./components/business-section"
+import ChatGPT from "./components/chat-gpt"
 import CTA from "./components/cta"
-import { Footer } from "./components/footer"
-
+import FeaturedSection from "./components/featured-section"
+import Footer from "./components/footer"
+import LatestNews from "./components/latest-news"
+import LatestResearch from "./components/latest-research"
+import Navbar from "./components/navbar"
+import Sidebar from "./components/sidebar"
+import StorySection from "./components/story-section"
+import { businessCards } from "./data/business"
 import { featuredCards, mainFeatured } from "./data/featured"
 import { newsCards } from "./data/news"
-import { storyCards } from "./data/story"
 import { researchCards } from "./data/research"
-import { businessCards } from "./data/business"
-import { ChatGPT } from "./components/chat-gpt"
+import { storyCards } from "./data/story"
 
 export default function HomeOpenAI() {
     const [sidebarMobileOpen, setSidebarMobileOpen] = useState(false)

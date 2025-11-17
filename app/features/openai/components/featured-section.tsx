@@ -1,11 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 import { formatDate } from "~/shared/lib/format"
 import type { Featured } from "../types"
-
-
-
-
-export function FeaturedSection({
+  
+export default function FeaturedSection({
   pageRef,
   title,
   category,

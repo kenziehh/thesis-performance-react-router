@@ -4,8 +4,6 @@ import { categories } from "../data/categories"
 import Drawer from "./drawer"
 import Separator from "./separator"
 
-
-
 export default function Navbar() {
     const [open, setOpen] = useState(false)
 

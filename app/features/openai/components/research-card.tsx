@@ -1,7 +1,6 @@
 import { formatDate } from '~/shared/lib/format'
 import type { Research } from '../types'
 
-
 export default function ResearchCard({ research }: { research: Research }) {
     return (
         <div className="containerw-full min-w-full flex flex-1 flex-col gap-3" >

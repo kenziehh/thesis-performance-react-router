@@ -3,9 +3,7 @@ import type { Product } from "../types"
 import { cn } from "~/shared/lib/utils"
 import { formatIDR } from "~/shared/lib/format"
 
-
-
-export function ProductCard({
+export default function ProductCard({
     product,
     className,
 }: {

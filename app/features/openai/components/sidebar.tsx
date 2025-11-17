@@ -1,7 +1,7 @@
 import { PanelLeft } from "lucide-react"
 import { cn } from "~/shared/lib/utils"
 
-export function Sidebar({
+export default function Sidebar({
     onSidebarMobileToggle,
     isSidebarMobileOpen,
     isSidebarDekstopOpen,

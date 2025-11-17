@@ -13,7 +13,7 @@ interface BadgeProps<T extends React.ElementType = 'div'> {
   children?: React.ReactNode;
 }
 
-export function Badge<T extends React.ElementType = 'div'>({
+export default function Badge<T extends React.ElementType = 'div'>({
   as,
   className,
   variant = 'white',

@@ -1,7 +1,5 @@
-import React from 'react'
-import { categories } from '../data/categories'
-import { Badge } from '~/shared/components/badge'
 import { Link } from 'react-router'
+import Badge from '~/shared/components/badge'
 
 export default function CategorySection({categories}: {categories: string[]}) {
     return (

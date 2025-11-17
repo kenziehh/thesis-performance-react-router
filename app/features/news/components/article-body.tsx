@@ -2,7 +2,6 @@ import type { Article } from '../types'
 
 
 export default function ArticleBody({ article }: { article: Article }) {
-
     return (
         <section className="prose max-w-none prose-p:leading-relaxed prose-headings:scroll-mt-20">
             <h1 className="text-3xl font-bold mb-6">{article.title}</h1>

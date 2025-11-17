@@ -8,6 +8,7 @@ import { Link } from "react-router"
 if (typeof window !== "undefined") {
     gsap.registerPlugin(TextPlugin, ScrollTrigger, useGSAP)
 }
+
 export default function CTA() {
     const sectionRef = useRef<HTMLDivElement | null>(null)
     const titleRef = useRef<HTMLHeadingElement | null>(null)

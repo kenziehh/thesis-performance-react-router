@@ -2,7 +2,7 @@ import { PanelLeft, PanelLeftDashed, Search } from "lucide-react";
 import { Link } from "react-router";
 
 
-export function Navbar({ onSidebarMobileToggle, onSidebarDekstopToggle, isSidebarDekstopOpen }: { onSidebarMobileToggle: () => void; onSidebarDekstopToggle: () => void; isSidebarDekstopOpen: boolean }) {
+export default function Navbar({ onSidebarMobileToggle, onSidebarDekstopToggle, isSidebarDekstopOpen }: { onSidebarMobileToggle: () => void; onSidebarDekstopToggle: () => void; isSidebarDekstopOpen: boolean }) {
     return (
         <header className="fixed z-50 w-full flex items-center justify-between px-6 py-4 bg-white">
             <div className="flex items-center gap-4">
