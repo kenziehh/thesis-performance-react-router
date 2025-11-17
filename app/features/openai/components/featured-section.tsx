@@ -1,6 +1,3 @@
-
-"use client"
-
 import { useEffect, useRef, useState } from "react"
 import { formatDate } from "~/shared/lib/format"
 import type { Featured } from "../types"

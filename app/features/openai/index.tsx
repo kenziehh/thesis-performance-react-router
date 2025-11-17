@@ -1,5 +1,3 @@
-"use client"
-
 import { useRef, useState, type RefObject } from "react"
 import { Navbar } from "./components/navbar"
 import { Sidebar } from "./components/sidebar"

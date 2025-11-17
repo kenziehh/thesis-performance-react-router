@@ -1,5 +1,3 @@
-"use client"
-
 import { CircleUser, Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
 import { categories } from "../data/categories"

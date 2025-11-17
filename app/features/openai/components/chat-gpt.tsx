@@ -1,5 +1,3 @@
-"use client"
-
 import { ArrowUp } from "lucide-react"
 import { useState, useRef } from "react"
 import gsap from "gsap"

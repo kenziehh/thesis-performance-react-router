@@ -1,5 +1,3 @@
-"use client"
-
 import { PanelLeft, PanelLeftDashed, Search } from "lucide-react";
 import { Link } from "react-router";
 
