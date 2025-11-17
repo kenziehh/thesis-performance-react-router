@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-import { TextPlugin } from "gsap/TextPlugin"
+import TextPlugin from "gsap/TextPlugin"
 import { useRef } from "react"
 import { Link } from "react-router"
 
