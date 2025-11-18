@@ -10,8 +10,6 @@ export default function ProductCard({
     product: Product
     className?: string
 }) {
-
-
     return (
         <article
             className={cn(
@@ -30,7 +28,6 @@ export default function ProductCard({
                     />
                 </div>
             </div>
-
             <div className="space-y-2 p-3">
                 <h2 className="line-clamp-2 text-sm md:text-[0.95rem] font-normal leading-5 text-foreground">{product.name}</h2>
 
@@ -38,7 +35,6 @@ export default function ProductCard({
 
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <div className="flex items-center gap-1">
-                        {/* rating stars */}
                         {Array.from({ length: 5 }).map((_, i) => {
                             const active = i < Math.round(product.rating)
                             return (
@@ -53,9 +49,8 @@ export default function ProductCard({
                         <span className="ml-1">{product.rating.toFixed(1)}</span>
                     </div>
                     <span aria-hidden="true">•</span>
-                    <span>{product.sold.toLocaleString("id-ID")} terjual</span>
+                    <span>{product.sold} terjual</span>
                 </div>
-
                 <div className="text-xs text-muted-foreground">{product.location}</div>
             </div>
         </article>
