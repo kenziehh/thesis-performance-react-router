@@ -12,7 +12,6 @@ export default function ArticleHeader({ article }: { article: Article }) {
                 <span aria-hidden="true">•</span>
                 <time dateTime="2025-10-14">{formatDate(article.date)}</time>
             </div>
-
             <figure className="mt-6">
                 <video
                     className="w-full rounded-lg border border-border"
@@ -25,14 +24,12 @@ export default function ArticleHeader({ article }: { article: Article }) {
                     autoPlay
                     muted
                 >
-                    <source src="/videos/news-clip.mp4" type="video/mp4" />
                     Browser Anda tidak mendukung video HTML5.
                 </video>
                 <figcaption className="mt-2 text-center text-xs text-muted-foreground">
                     Video: {article.videoTitle}
                 </figcaption>
             </figure>
-
             <aside className="mt-8 rounded-md border border-border bg-card p-4">
                 <h2 className="text-lg font-semibold">Fakta Singkat</h2>
                 <ul className="mt-2 list-disc pl-5 text-sm text-muted-foreground">
@@ -43,7 +40,6 @@ export default function ArticleHeader({ article }: { article: Article }) {
                     }
                 </ul>
             </aside>
-
         </div>
     )
 }
