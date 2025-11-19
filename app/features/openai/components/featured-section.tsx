@@ -83,6 +83,8 @@ export default function FeaturedSection({
             <img
               src={src}
               alt="Featured Image"
+              decoding="async"
+              loading="lazy"
               className="max-h-[600px] object-cover w-full h-full"
             />
           </div>
@@ -102,7 +104,8 @@ export default function FeaturedSection({
                 <img
                   src={src}
                   alt="Featured Image"
-                  
+                  decoding="async"
+                  loading="lazy"
                   className="max-h-[400px] object-cover w-full h-full"
                 />              </div>
               <h2 className="text-2xl font-bold mb-2">{title}</h2>
@@ -118,7 +121,8 @@ export default function FeaturedSection({
                     <img
                       src={card.src}
                       alt={card.title}
-                      
+                      decoding="async"
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -142,6 +146,8 @@ export default function FeaturedSection({
                 <img
                   src={src}
                   alt="Featured Image"
+                  decoding="async"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                   
                 />
@@ -162,6 +168,8 @@ export default function FeaturedSection({
                     <img
                       src={card.src}
                       alt={card.title}
+                      decoding="async"
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

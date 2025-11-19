@@ -18,6 +18,8 @@ export default function StoryCard({ story }: { story: Story }) {
                 <img
                     src={story.src}
                     alt={story.title}
+                    decoding='async'
+                    loading='lazy'
                     className="absolute object-cover rounded-lg w-full h-full"
                 />
             </div>

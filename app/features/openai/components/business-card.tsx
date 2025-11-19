@@ -7,6 +7,8 @@ export default function BusinessCard({ business }: { business: Business }) {
                 <img
                     src={business.src}
                     alt={business.title}
+                    decoding='async'
+                    loading='lazy'
                     className="object-cover rounded-lg w-full h-full"
                 />
             </div>

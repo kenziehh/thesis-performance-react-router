@@ -5,7 +5,7 @@ export default function NewsCard({ news }: { news: News }) {
     return (
         <div className='flex gap-3 items-center '>
             <div className='relative aspect-square h-32 md:h-48'>
-                <img alt={news.title} src={news.src} className='rounded-xl w-full h-full'/>
+                <img alt={news.title} src={news.src} className='rounded-xl w-full h-full' decoding="async" loading="lazy" />
             </div>
             <div className="flex flex-col gap-4">
                 <h2 className="text-sm md:text-lg line-clamp-3">{news.title}</h2>
